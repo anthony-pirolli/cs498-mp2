@@ -15,8 +15,8 @@ def hello_world():
         return f'{socket.gethostname()}'
 
     if request.method == 'POST':
-        script_path = 'submit.py'
-        process = subprocess.Popen(['python', script_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        script_path = 'stress.py'
+        process = subprocess.Popen(['python3', script_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         return ""
 
 if __name__ == '__main__':
